@@ -18,27 +18,28 @@ export default function Navigation() {
 
   const navLinks = [
     { href: "#home", label: "Home" },
-    { href: "#about", label: "About" },
     { href: "#skills", label: "Skills" },
-    { href: "#experience", label: "Experience" },
     { href: "#projects", label: "Projects" },
+    { href: "#experience", label: "Experience" },
     { href: "#contact", label: "Contact" },
   ];
 
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "" : "bg-transparent"
+        isScrolled || isMobileMenuOpen
+          ? "backdrop-blur-md bg-black/50 shadow-lg"
+          : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center md:justify-center justify-between h-16">
+      <div className="container mx-auto px-4 sm:px-6 md:px-0 lg:px-8">
+        <div className="flex items-center md:justify-start justify-between h-16">
           <a href="#home" className="text-xl font-bold text-primary">
             <img src="/portl-log-2.png" className=" w-15 h-10 " />
           </a>
 
           {/* Desktop Navigation with Uiverse Style */}
-          <div className="hidden md:flex">
+          <div className="hidden md:flex md:ml-10 lg:ml-32 xl:ml-88">
             <div className="radio-input">
               {navLinks.map((link) => (
                 <label key={link.href} className="label">
@@ -66,10 +67,17 @@ export default function Navigation() {
 
         {/* Mobile Navigation with Uiverse Style */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border flex justify-end">
-            <div className="radio-input flex-col">
+          <div className="md:hidden py-4 border-t border-border flex  ">
+            <div className="flex flex-col">
               {navLinks.map((link) => (
-                <label key={link.href} className="label">
+                <label
+                  key={link.href}
+                  className={`py-2 ${
+                    active === link.href
+                      ? "text-primary text-shadow-lg text-shadow-white/20 text-[17px]"
+                      : "text-white"
+                  }`}
+                >
                   <input
                     type="radio"
                     name="navbar-mobile"
@@ -79,8 +87,9 @@ export default function Navigation() {
                       setIsMobileMenuOpen(false);
                       window.location.hash = link.href;
                     }}
+                    className="hidden"
                   />
-                  <span className="text">{link.label}</span>
+                  <span className=" ">{link.label}</span>
                 </label>
               ))}
             </div>

@@ -191,7 +191,7 @@ export default function Skills() {
       ref={containerRef}
       className="relative min-h-screen py-5 px-4 sm:px-6 lg:px-8 overflow-hidden bg-teal-500/[0.08] antialiased"
     >
-      <h2 className="text-3xl sm:text-4xl font-bold mb-2 text-center text-white">
+      <h2 className="text-3xl sm:text-4xl font-bold mb-5 text-center text-white">
         Skills & <span className="text-lime-400">Expertise</span>
       </h2>
 
@@ -322,9 +322,9 @@ export default function Skills() {
                 {/* Skill Card with Light Effect */}
                 <div className={`relative ${index % 2 === 1 ? "" : ""}`}>
                   <div
-                    className={`md:p-2 p-1 backdrop-blur-lg border-[1px] bg-black/60 hover:shadow-2xl transition-all duration-700 transform ${
+                    className={`md:p-2 p-1 backdrop-blur-lg border-[1px] bg-black/60  transition-all duration-700 transform ${
                       isBranchVisible && hasTrunkReached
-                        ? "translate-y-0 opacity-100 hover:scale-105"
+                        ? "translate-y-0 opacity-100 "
                         : index % 2 === 1
                         ? "-translate-y-10 opacity-0"
                         : "translate-y-10 opacity-0"
@@ -372,7 +372,7 @@ export default function Skills() {
                         {category.skills.map((skill, skillIndex) => (
                           <span
                             key={skillIndex}
-                            className="px-1 py-[2px] md:px-3 md:py-1 rounded-full md:text-sm text-[7px] border transition-all duration-500 hover:scale-105 transform backdrop-blur-sm"
+                            className="px-1 py-[2px] md:px-3 md:py-1 rounded-full md:text-sm text-[7px] border transition-all duration-500 transform backdrop-blur-sm"
                             style={{
                               transitionDelay:
                                 isBranchVisible && hasTrunkReached

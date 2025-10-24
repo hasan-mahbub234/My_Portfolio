@@ -1,18 +1,23 @@
 export const projects = [
   {
-    title: "Wemasomo - NGO Platform",
-    category: "Web Application",
+    title: "Solvemeet - Consultation Platform",
+    category: "Web and Mobile Application",
     color: "bg-[#011313]",
     description:
-      "Developed a comprehensive web application for an NGO focused on female health and education. Features topic descriptions with multimedia content and AI assistance for enhanced user support.",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/solve1-kZFsT5e9IpcmZT8sHbXgN1soMVCYe4.png",
-    technologies: ["Next.js", "Tailwind CSS", "Firebase", "AI Integration"],
-    link: "https://wemasomo.com",
+      "SolveMeet is a consultation-based platform designed for seamless interactions between Advisors and Clients. Clients can connect with advisors through audio calls, video calls, and chat. To ensure real-time communication, I implemented Socket.IO for virtual calls, creating a smooth and interactive",
+    image: "/solvemeet.png",
+    technologies: [
+      "Next.js",
+      "React Native",
+      "Tailwind CSS",
+      "Python",
+      "AI Integration",
+    ],
+    link: "https://www.solvemeet.com/",
     features: [
       "Comprehensive topic descriptions with graphical images and videos",
       "AI-powered assistance for user queries",
-      "Firebase backend for real-time data management",
+      "Fast API backend for real-time data management",
       "Responsive design for all devices",
       "Content management system for easy updates",
     ],
@@ -22,39 +27,11 @@ export const projects = [
       "Successfully launched a platform that serves thousands of users, providing valuable health and education resources with an intuitive interface and AI-powered support.",
   },
   {
-    title: "Bullman Equipments - eCommerce",
-    category: "Mobile Application",
-    color: "bg-[#021919]",
-    description:
-      "Built a mobile eCommerce application frontend from Figma prototypes. Managed 1,000+ products with API integration, implemented Stripe payment gateway, and streamlined order management.",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/bull2-4pgeaMmW35Bwc1nPK3d9deNJVTpwEF.png",
-    technologies: [
-      "React Native",
-      "Stripe",
-      "API Integration",
-      "Mobile Development",
-    ],
-    link: "#",
-    features: [
-      "Efficient management of 1,000+ products",
-      "Stripe payment gateway integration",
-      "Streamlined order management system",
-      "Product search and filtering",
-      "User authentication and profile management",
-      "Shopping cart and wishlist functionality",
-    ],
-    challenges:
-      "Managing a large product catalog while maintaining smooth performance on mobile devices required careful optimization of API calls and implementing efficient caching strategies.",
-    results:
-      "Delivered a high-performance mobile app that handles thousands of products seamlessly with secure payment processing and excellent user experience.",
-  },
-  {
-    title: "EG Gold - Product Showcase",
+    title: "EastGold - Investment Platform",
     category: "Web Application",
     color: "bg-[#031e1e] ",
     description:
-      "Created an elegant product showcase website with responsive design, featuring premium gold products with sophisticated UI/UX and smooth animations.",
+      "Created a platform ensures seamless user interactions, secure transactions, and efficient investment oversight, featuring premium gold products with sophisticated UI/UX and smooth animations.",
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Minimalist%20Neutral%20Multi%20Device%20Computer%20Mockup%20Website%20Launch%20Instagram%20Post%20%282%29-PQ616OOuIHnFc6ghMdf6AlSFP4P1Nw.png",
     technologies: ["React.js", "Tailwind CSS", "Responsive Design", "GSAP"],
@@ -72,7 +49,7 @@ export const projects = [
       "Built a visually stunning website that effectively showcases premium products with smooth animations and excellent performance across all devices.",
   },
   {
-    title: "Multi-Vendor eCommerce Platform",
+    title: "Shulov eCommerce Platform",
     category: "Full-Stack Application",
     color: "bg-[#052a2a]",
     description:
@@ -85,7 +62,7 @@ export const projects = [
       "Authentication",
       "Payment Integration",
     ],
-    link: "#",
+    link: "https://shulovmall.com/",
     features: [
       "Multi-vendor support with separate dashboards",
       "Advanced product management",
@@ -98,34 +75,6 @@ export const projects = [
       "Building a scalable multi-vendor system required careful database design and implementing role-based access control for different user types.",
     results:
       "Created a robust eCommerce platform that supports multiple vendors with comprehensive management tools and secure payment processing.",
-  },
-  {
-    title: "FitZone Gym Management App",
-    category: "Mobile Application",
-    color: "bg-[#022c2c]",
-    description:
-      "Built a comprehensive gym management mobile application with partner management, membership tracking, and real-time updates.",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/eastgold2-DXx5qicNTVmHsIcF2Rb7DfxJnZzxKc.png",
-    technologies: [
-      "React Native",
-      "Firebase",
-      "Real-time Database",
-      "Mobile UI",
-    ],
-    link: "#",
-    features: [
-      "Partner and gym management",
-      "Membership tracking and renewals",
-      "Real-time notifications",
-      "Workout plans and scheduling",
-      "Payment processing",
-      "Analytics dashboard",
-    ],
-    challenges:
-      "Implementing real-time synchronization across multiple devices while maintaining data consistency required careful Firebase configuration and offline support.",
-    results:
-      "Delivered a feature-rich gym management app that streamlines operations and improves member engagement with real-time updates and comprehensive tracking.",
   },
   {
     title: "Bullman Fitness Equipment Store",

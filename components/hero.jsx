@@ -161,7 +161,7 @@ const AnimatedImageItem = ({ text, imgPath, index, isVisible }) => {
   return (
     <span
       className={cn(
-        "flex items-center pb-2 opacity-0",
+        "flex items-center pb-2 max-md:py-4 max-md:ml-2  opacity-0",
         show && "animate-slide-up"
       )}
       style={show ? { animationDelay: `${index * 0.1}s` } : {}}
@@ -169,7 +169,7 @@ const AnimatedImageItem = ({ text, imgPath, index, isVisible }) => {
       <img
         src={imgPath}
         alt={text}
-        className="xl:size-12 md:size-10 size-7 md:p-2 p-1 rounded-full bg-white-50"
+        className="xl:size-12 md:size-10 size-6 md:p-2 p-1  rounded-full bg-white-50"
       />
       <span>{text}</span>
     </span>
@@ -233,15 +233,19 @@ export default function Hero() {
     <section
       id="home"
       ref={heroRef}
-      className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16 opacity-0 relative overflow-hidden  bg-teal-500/[0.08] antialiased"
+      className="min-h-screen flex items-center justify-center px-2 sm:px-2 lg:px-8 pt-16 opacity-0 relative overflow-hidden  bg-teal-500/[0.08] antialiased max-md:pb-10"
     >
+      <div
+        className="gradient-blur w-72 h-72 bg-cyan-500 top-10 right-20"
+        style={{ animationDelay: "1s" }}
+      ></div>
       {/* Spotlight effects - positioned to highlight the image */}
       <Spotlight className="top-40 left-0 md:top-20 md:left-40" fill="cyan" />
 
-      <div className="container mx-auto relative z-10">
-        <div className="flex flex-row max-md:flex-wrap max-md:justify-center items-center max-md:16 md:px-24">
-          {/* Mobile image */}
-          <div className=" flex justify-center w-[40%]  mt-20">
+      <div className="container xl:mx-auto max-xl:mx-2  relative z-10">
+        <div className="flex flex-row max-lg:flex-col max-md:justify-center items-center  max-xl:px-2 xl:px-24">
+          {/*  image */}
+          <div className=" flex justify-center w-[40%] max-lg:w-full  mt-20">
             <div
               className={`transition-all duration-1000 ${
                 isVisible ? "animate-fade-in" : "opacity-0"
@@ -259,22 +263,22 @@ export default function Hero() {
           </div>
 
           {/* Text content */}
-          <div className="max-lg:text-center w-[60%] text">
+          <div className="max-lg:text-center w-[60%] max-lg:w-full text">
             <div className="">
-              <div className="flex flex-row items-end">
-                <p className="text-primary text-[25px] pr-4 font-mono">
+              <div className="flex flex-row items-end max-lg:justify-center">
+                <p className="text-primary text-[25px] max-md:text-[18px] pr-4 max-md:pr-2 font-mono">
                   Heyoo, meet
                 </p>
                 <h1 className="relative text-3xl sm:text-5xl lg:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-teal-400 to-indigo-500 bg-clip-text text-transparent inline-block">
                   Mahbub!
                 </h1>
               </div>
-              <div className="flex flex-row items-center">
-                <h2 className="text-xl">
+              <div className="flex flex-row items-center max-lg:justify-center">
+                <h2 className="max-md:text-[10px] md:max-lg:text-[16px] xl:text-xl">
                   your Full-Stack Developer, skilled in{" "}
                 </h2>
                 <span className="slide">
-                  <span className="wrapper text-4xl">
+                  <span className="wrapper text-4xl max-lg:text-2xl max-md:text-[17px]">
                     {images.map((item, index) => (
                       <AnimatedImageItem
                         key={index}
@@ -288,12 +292,12 @@ export default function Hero() {
                 </span>
               </div>
             </div>
-            <p className="">
+            <p className="max-md:text-[13px] md:max-lg:text-[16px] xl:text-xl">
               A AI powered Web & Mobile Application Developer with 4+ years of
               experience, specializing in Real Estate, Restauran, portfolios,
               business websites, e-commerce solutions, and applications.
             </p>
-            <div className="flex flex-wrap gap-4 max-lg:justify-center">
+            <div className="flex flex-wrap gap-4 max-lg:justify-center mt-3">
               <button className="Btn">
                 <a href="#contact">Get In Touch</a>
               </button>

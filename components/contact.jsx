@@ -123,7 +123,7 @@ export default function Contact() {
             </CardHeader>
             {contactInfo.map((info, index) => (
               <div key={index} className="flex items-start gap-0 mb-0">
-                <div className="p-2 bg-primary/10 rounded-lg">
+                <div className="p-2 bg-primary/10 rounded-lg mr-2">
                   <info.icon className="text-primary" size={20} />
                 </div>
                 <div>

@@ -3,7 +3,7 @@ import { projects } from "./constant.jsx";
 
 function Projects() {
   return (
-    <div className="bg-teal-500/[0.08] antialiased">
+    <section id="projects" className="bg-teal-500/[0.08] antialiased py-20">
       <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-center text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300">
         My Projects
       </h2>
@@ -17,7 +17,7 @@ function Projects() {
             key={index}
             className="sticky flex items-center justify-center py-8"
             style={{
-              top: `${40 + index * 20}px`,
+              top: `${40 + index * 30}px`,
             }}
           >
             <div className="max-w-4xl w-full mx-auto px-4">
@@ -34,7 +34,7 @@ function Projects() {
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-64 lg:h-full object-cover "
+                      className="w-full h-64 lg:h-full object-contain max-lg:object-contain "
                     />
                     <div className="absolute inset-0 bg-gradient-to-r from-slate-900/40 to-transparent lg:bg-gradient-to-r lg:from-slate-900/60 lg:via-slate-900/20 lg:to-transparent" />
 
@@ -48,11 +48,11 @@ function Projects() {
 
                   {/* Project Content */}
                   <div className="lg:w-1/2 p-6 lg:p-8 relative z-10">
-                    <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4 group-hover:text-emerald-300 transition-colors duration-300">
+                    <h3 className="text-2xl lg:text-3xl max-md:text-[18px] font-bold text-white mb-4 group-hover:text-emerald-300 transition-colors duration-300">
                       {project.title}
                     </h3>
 
-                    <p className="text-gray-300 leading-relaxed mb-6">
+                    <p className="text-gray-300 leading-relaxed mb-6 max-md:text-[12px]">
                       {project.description}
                     </p>
 
@@ -86,7 +86,7 @@ function Projects() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 
